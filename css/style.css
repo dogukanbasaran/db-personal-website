@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bgColor1: #031124;
+    --textColor: #fff;
+    --borderColor: rgba(255,255,255, 0.2);  
+    --fontFamily: "Poppins", system-ui;
+    --fontSizeDefault: clamp(0.50em, 0.50em + 1.75vw, 1em);
+}
+
+html{
+    background: var(--bgColor1);
+    color: var(--textColor);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSizeDefault);
+    
+}
+
+/* HEADER */
+
+header{
+    border-bottom: 0.5px solid var(--borderColor);
+    position: absolute;
+    width: 100%;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    margin: auto;
+    padding: 20px 5px;
+}
+
+/* LOGO */
+
+#logo{
+    text-decoration: none;
+    color: var(--textColor);
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+/* NAVBAR */
+
+#navbar{
+   display: block;
+}
+
+#navbar ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+#navbar ul li a{
+    color: var(--textColor);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* MOBILE MENU */
+
+#mobile-menu{
+    display: none;
+}
+
+
+/* HOME SECTION */
+
+#home .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#introduction-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--fontSizeDefault);
+}
+
+#introduction-card strong{
+    font-weight: 900;
+}
+
+#contact-btn{
+    background: linear-gradient(150deg, rgba(3,17,36,1) 0%, rgba(22,112,108,1) 100%);
+    width: 50%;
+    border-radius: 5px;
+    height: auto;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#contact-btn:hover{
+    box-shadow: 2px 2px 5px #000000;
+}
+
+
+/* FOOTER */
+
+footer{
+    border-top: 0.5px solid var(--borderColor);
+    position: absolute;
+    width: 100%;
+}
+
+
+footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5px;
+    font-size: var(--fontSizeDefault);
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px){
+    #navbar{
+        display: none;
+    }
+
+    #mobile-menu{
+        display: block;
+    }
+}
+
+
+
