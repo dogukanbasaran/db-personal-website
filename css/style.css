@@ -6,7 +6,8 @@
 
 :root{
     --bgColor1: #031124;
-    --textColor: #fff;
+    --bgColor2: linear-gradient(90deg, rgba(3,17,36,1) 70%, rgba(22,112,108,1) 100%);
+    --textColor: #d6d6d6;
     --borderColor: rgba(255,255,255, 0.2);  
     --fontFamily: "Poppins", system-ui;
     --fontSizeDefault: clamp(0.50em, 0.50em + 1.75vw, 1em);
@@ -68,6 +69,7 @@ header .container{
 
 #mobile-menu{
     display: none;
+    font-size: 1.5em;
 }
 
 
@@ -78,6 +80,7 @@ header .container{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    border-bottom: 0.5px solid var(--borderColor);
 }
 
 #introduction-card{
@@ -85,18 +88,62 @@ header .container{
     flex-direction: column;
     align-items: center;
     font-size: var(--fontSizeDefault);
+    gap: 16px;
 }
 
-#introduction-card strong{
+#intro-photo{
+    width: 13em;
+    height: auto;
+}
+
+#intro-photo img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #000000;
+}
+
+
+#intro-text{
+    text-align: center;
+}
+
+#intro-text strong{
     font-weight: 900;
+}
+
+#social-media-icons{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon-container{
+    background: linear-gradient(150deg, rgba(3,17,36,1) 0%, rgba(22,112,108,1) 100%);
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container:hover{
+    box-shadow: 2px 2px 5px #000000;
+}
+
+.icon-container a{
+    color: var(--textColor);
+    font-size: 1.25em;
 }
 
 #contact-btn{
     background: linear-gradient(150deg, rgba(3,17,36,1) 0%, rgba(22,112,108,1) 100%);
-    width: 50%;
     border-radius: 5px;
     height: auto;
-    padding: 10px 0;
+    padding: 10px 15px;
     cursor: pointer;
     font-weight: 700;
     text-align: center;
@@ -105,6 +152,38 @@ header .container{
 
 #contact-btn:hover{
     box-shadow: 2px 2px 5px #000000;
+}
+
+
+/* ABOUT SECTION */
+
+
+#about .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+#about p{
+    text-align: justify;
+}
+
+.my-skills{
+    border: solid;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.my-skills i{
+    font-size: 2em;
 }
 
 
@@ -138,6 +217,18 @@ footer .container{
     #mobile-menu{
         display: block;
     }
+
+    #about .container{
+        width: 80%;
+    }
+
+    #social-media-icons{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        gap: 20px;
+    }
+
 }
 
 
