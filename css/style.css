@@ -6,7 +6,7 @@
 
 :root{
     --bgColor1: #031124;
-    --bgColor2: linear-gradient(90deg, rgba(3,17,36,1) 70%, rgba(22,112,108,1) 100%);
+    --linearColor: linear-gradient(150deg, rgb(6, 31, 66) 0%, rgba(22,112,108,1) 100%);
     --textColor: #d6d6d6;
     --borderColor: rgba(255,255,255, 0.2);  
     --fontFamily: "Poppins", system-ui;
@@ -120,7 +120,7 @@ header .container{
 }
 
 .icon-container{
-    background: linear-gradient(150deg, rgba(3,17,36,1) 0%, rgba(22,112,108,1) 100%);
+    background: var(--linearColor);
     height: 30px;
     width: 30px;
     border-radius: 5px;
@@ -140,7 +140,7 @@ header .container{
 }
 
 #contact-btn{
-    background: linear-gradient(150deg, rgba(3,17,36,1) 0%, rgba(22,112,108,1) 100%);
+    background: var(--linearColor);
     border-radius: 5px;
     height: auto;
     padding: 10px 15px;
@@ -175,15 +175,31 @@ header .container{
 }
 
 .my-skills{
-    border: solid;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .my-skills i{
     font-size: 2em;
+}
+
+.skill-containers{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    height: 50px;
+}
+
+.progressBar{
+    height: 20px;
+    width: 100%;
+    background: var(--linearColor);
+    border: 0.5px solid var(--borderColor);
+    text-align: end;
+    font-size: 0.80em;
+    padding: 0 5px;
 }
 
 
