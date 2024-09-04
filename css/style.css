@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 
+
+
 :root{
     --bgColor1: #031124;
-    --linearColor: linear-gradient(150deg, rgb(6, 31, 66) 0%, rgba(22,112,108,1) 100%);
+    --linearColor: linear-gradient(150deg, #061f42 0%, #16706c 100%);
     --textColor: #d6d6d6;
     --borderColor: rgba(255,255,255, 0.2);  
     --fontFamily: "Poppins", system-ui;
@@ -17,8 +19,7 @@ html{
     background: var(--bgColor1);
     color: var(--textColor);
     font-family: var(--fontFamily);
-    font-size: var(--fontSizeDefault);
-    
+    font-size: var(--fontSizeDefault); 
 }
 
 /* HEADER */
@@ -43,7 +44,7 @@ header .container{
 #logo{
     text-decoration: none;
     color: var(--textColor);
-    font-weight: 700;
+    font-weight: 900;
     font-size: 1.25em;
 }
 
@@ -62,7 +63,7 @@ header .container{
 #navbar ul li a{
     color: var(--textColor);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* MOBILE MENU */
@@ -70,6 +71,8 @@ header .container{
 #mobile-menu{
     display: none;
     font-size: 1.5em;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 
@@ -83,28 +86,16 @@ header .container{
     border-bottom: 0.5px solid var(--borderColor);
 }
 
-#introduction-card{
+#introduction{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-size: var(--fontSizeDefault);
     gap: 16px;
 }
 
-#intro-photo{
-    width: 13em;
-    height: auto;
-}
-
-#intro-photo img{
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #000000;
-}
-
-
-#intro-text{
+.intro-text{
     text-align: center;
 }
 
@@ -112,38 +103,24 @@ header .container{
     font-weight: 900;
 }
 
-#social-media-icons{
-    display: flex;
-    width: 50%;
-    justify-content: center;
-    gap: 20px;
+.intro-text h1{
+    font-size: clamp(1em, 1em + 2vw, 3em);
 }
 
-.icon-container{
-    background: var(--linearColor);
-    height: 30px;
-    width: 30px;
-    border-radius: 5px;
-    padding: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.intro-text h2{
+    font-size: clamp(0.75em, 0.75em + 2vw, 2.5em);
 }
 
-.icon-container:hover{
-    box-shadow: 2px 2px 5px #000000;
-}
 
-.icon-container a{
-    color: var(--textColor);
-    font-size: 1.25em;
-}
 
 #contact-btn{
     background: var(--linearColor);
     border-radius: 5px;
-    height: auto;
-    padding: 10px 15px;
+    width: 10em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-weight: 700;
     text-align: center;
@@ -153,55 +130,6 @@ header .container{
 #contact-btn:hover{
     box-shadow: 2px 2px 5px #000000;
 }
-
-
-/* ABOUT SECTION */
-
-
-#about .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    height: auto;
-    flex-direction: column;
-    width: 50%;
-    margin: auto;
-    padding: 50px 0;
-}
-
-#about p{
-    text-align: justify;
-}
-
-.my-skills{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.my-skills i{
-    font-size: 2em;
-}
-
-.skill-containers{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
-    height: 50px;
-}
-
-.progressBar{
-    height: 20px;
-    width: 100%;
-    background: var(--linearColor);
-    border: 0.5px solid var(--borderColor);
-    text-align: end;
-    font-size: 0.80em;
-    padding: 0 5px;
-}
-
 
 /* FOOTER */
 
@@ -226,6 +154,7 @@ footer .container{
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 768px){
+
     #navbar{
         display: none;
     }
@@ -234,18 +163,6 @@ footer .container{
         display: block;
     }
 
-    #about .container{
-        width: 80%;
-    }
-
-    #social-media-icons{
-        display: flex;
-        width: 50%;
-        justify-content: center;
-        gap: 20px;
-    }
-
 }
-
 
 
