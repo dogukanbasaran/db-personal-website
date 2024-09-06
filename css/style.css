@@ -162,14 +162,14 @@ header .container{
    background: var(--linearColor2);
 }
 
-/* PERSONAL INFORMATION SECTION */
+/* PERSONAL INFORMATION */
 
 .personal{
     display: flex;
     flex-direction: column;
 }
 
-.personal > p{
+#about .container h2{
     font-size: 1.5em;
     text-align: center;
     padding: 20px;
@@ -208,21 +208,11 @@ header .container{
     height: 100%;
 }
 
-
-
-/* SKILLS SECTION */
+/* SKILLS */
 
 .skills{
     display: flex;
     flex-direction: column;
-}
-
-.skills > p{
-    font-size: 1.5em;
-    text-align: center;
-    padding: 20px;
-    font-weight: 800;
-    text-transform: uppercase;
 }
 
 #skills-container{
@@ -234,20 +224,23 @@ header .container{
 #skills-container > div{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     gap: 10px;
 }
 
 #skills-container > div > .icon{
-    font-size: 1.5em;
+    font-size: 1.25em;
     background: none;
     width: 4%;
+    height: auto;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 #skills-container > div > div {
-    height: 25px;
+    height: 20px;
     background: var(--linearColor);
     width: 100%;
     text-align: end;
@@ -293,7 +286,15 @@ footer .container{
 @media only screen and (max-width: 860px){
 
     #about .container{
-        width: 90%;
+        width: 80%;
+    }
+
+    #about .container h2{
+        font-size: 1.10em;
+    }
+
+    #about .container p{
+        font-size: 0.90em;
     }
 
     #info{
