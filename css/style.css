@@ -140,33 +140,27 @@ header .container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 10px;
+    padding: 20px 0 30px 0;
+    gap: 10px;
 }
 
 #about .container{
-   margin: 10px 0px 30px 0px;
    display: grid;
-   align-items: stretch;
-   justify-items: center;
-   row-gap: 20px;
+   width: 90vw;
+   grid-template-columns: repeat(2, 45%);
+   grid-template-rows: repeat(2, auto);
+   justify-content: space-evenly;
+   row-gap: 40px;
+   padding: 40px 0;
 }
 
 #about .container > div{
    border: 0.5px solid var(--borderColor);
    box-shadow: 10px 10px 100px #000000;
-   width: 96%;
    border-radius: 5px;
    padding: 20px;
    background: var(--linearColor2);
-}
-
-/* PERSONAL INFORMATION */
-
-.personal{
-    display: flex;
-    flex-direction: column;
+   width: 100%;
 }
 
 #about .container h2{
@@ -175,37 +169,6 @@ header .container{
     padding: 20px;
     font-weight: 800;
     text-transform: uppercase;
-}
-
-#info{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    padding-bottom: 20px;
-    border-bottom: 0.5px solid var(--borderColor);
-}
-
-#info span{
-    font-weight: 700;
-}
-
-#info #info-photo{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-}
-
-#info #info-photo > img{
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #000000;
-    object-fit: cover;
-    max-inline-size: 100%;
-}
-
-#info #info-text{
-    width: 60%;
-    height: 100%;
 }
 
 /* SKILLS */
@@ -282,60 +245,18 @@ footer .container{
 
 }
 
-
-@media only screen and (max-width: 860px){
-
+@media only screen and (max-width: 1024px){
     #about .container{
-        width: 80%;
-    }
-
-    #about .container h2{
-        font-size: 1.10em;
-    }
-
-    #about .container p{
-        font-size: 0.90em;
-    }
-
-    #info{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #info > div{
-        width: 100% !important;
-    }
-
-    #info #info-text{
-        text-align: center;
-    }
-
-}
-
-@media only screen and (min-width: 860px) and (max-width: 1439px){
-
-
-    #about .container{
-      width: 60%;
-      min-width: 50em;
-    }
-
-}
-
-@media only screen and (min-width: 1440px){
-    #about .container{
-        width: 90%;
-        grid-template-columns: repeat(2, 50%);
-        justify-items: center;
-        max-width: 100em;
-    }
-
-    #about .container > div{
-        max-width: 50em;
+        grid-template-columns: repeat(1, 100%);
+        padding: 0;
     }
 }
 
-
+@media only screen and (min-width: 768px) and (max-width:1024px){
+    #about .container{
+        grid-template-columns: repeat(1, 96%);
+    }
+}
 
 
 
