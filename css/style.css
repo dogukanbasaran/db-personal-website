@@ -171,7 +171,7 @@ header .container{
     text-transform: uppercase;
 }
 
-/* SKILLS */
+/* ABOUT SECTION > SKILLS */
 
 .skills{
     display: flex;
@@ -213,6 +213,84 @@ header .container{
     font-size: 0.80em;
 }
 
+/* CONTACT SECTION */
+
+#contact{
+    padding: 20px 0 40px 0;
+}
+
+#contact .container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin: auto;
+}
+
+#contact form{
+    border: 0.5px solid var(--borderColor);
+    background: var(--linearColor2);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50em;
+    padding: 30px;
+}
+
+#contact form .input-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,48%);
+    grid-template-rows: repeat(2,auto);
+    justify-content: space-between;
+    height: auto;
+    padding: 20px;
+}
+
+#contact form .input-container > input{
+  background: none;
+  border: none;
+  outline: none;
+  margin-bottom: 5px;
+  border-bottom: 0.5px solid var(--borderColor);
+  padding: 10px 0;
+  color: var(--textColor);
+  font-size: 1em;
+}
+
+
+#contact form > textarea{
+    width: 96%;
+    background: none;
+    border: 0.5px solid var(--borderColor);
+    outline: none;
+    resize: none;
+    color: var(--textColor);
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#contact form > #btn-container{
+    width: 96%;
+    display: flex;
+    justify-content: end;
+
+}
+
+#btn-container > button{
+    color: var(--textColor);
+    border: none;
+    font-size: 1em;
+}
+
+
+
+
 /* FOOTER */
 
 footer{
@@ -250,12 +328,26 @@ footer .container{
         grid-template-columns: repeat(1, 100%);
         padding: 0;
     }
+
+    #contact form{
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width:1024px){
     #about .container{
-        grid-template-columns: repeat(1, 96%);
+        grid-template-columns: repeat(1, 100%);
     }
+}
+
+
+@media only screen and (max-width: 560px){
+
+    #contact form .input-container{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+    }
+
 }
 
 
